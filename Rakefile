@@ -31,7 +31,7 @@ namespace :db do
   end
 
   desc "delete database and schema files and migrates"
-  task :reset_all_0 do
+  task :reset_all do
     File.delete('./db/ar.db') if File.exist?('./db/ar.db')
     File.delete('./db/schema.rb') if File.exist?('./db/schema.rb')
 
