@@ -24,7 +24,7 @@ namespace :db do
     Pry.start
   end
 
-  desc "delete database and schema"
+  desc "delete database and schema files"
   task :delete_all do
     File.delete('./db/ar.db') if File.exist?('./db/ar.db')
     File.delete('./db/schema.rb') if File.exist?('./db/schema.rb')
