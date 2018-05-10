@@ -1,5 +1,5 @@
-class AddCharactersToShow < ActiveRecord::Migration[5.1]
+class AddCharactersToActor < ActiveRecord::Migration[5.1]
   def change
-    add_column :characters, :show_id, :integer
+    add_column :characters, :actor_id, :integer
   end
 end
