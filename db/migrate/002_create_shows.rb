@@ -4,6 +4,7 @@ class CreateShows < ActiveRecord::Migration[5.1]
       t.string :name
       t.string :day
       t.string :season
+      t.string :genre
     end
   end
 end
