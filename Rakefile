@@ -24,6 +24,13 @@ namespace :db do
     Pry.start
   end
 
+  desc "delete database and schema"
+  task :delete_all do
+    File.delete('./db/ar.db') if File.exist?('./db/ar.db')
+    File.delete('./db/schema.rb') if File.exist?('./db/schema.rb')
+
+  end
+
   desc "delete database and schema files and migrates"
   task :reset_all do
     File.delete('./db/ar.db') if File.exist?('./db/ar.db')
@@ -32,5 +39,6 @@ namespace :db do
     connection_details = YAML::load(File.open('config/database.yml'))
     ActiveRecord::Base.establish_connection(connection_details)
     ActiveRecord::Migrator.migrate("db/migrate/")
+  end
   end
 end
