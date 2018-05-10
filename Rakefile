@@ -25,7 +25,7 @@ namespace :db do
   end
 
   desc "delete database and schema"
-  task :reset_all do
+  task :delete_all do
     File.delete('./db/dr.db') #if File.exist?(path_to_file)
     # File.delete(path_to_file) #if File.exist?(path_to_file)
   end
